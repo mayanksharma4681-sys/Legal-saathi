@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081936">
+<title>Legal Saathi | Your Legal Awareness Assistant</title>
+<style>
+:root{--navy:#081936;--navy2:#102b55;--gold:#d9ad4e;--gold2:#f0d18a;--ink:#18243a;--muted:#68758b;--paper:#f6f7fb;--white:#fff;--line:#e5e9f1;--green:#237a57}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.top{background:var(--navy);color:white;padding:15px max(18px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:5;box-shadow:0 4px 18px #07152d30}.brand{display:flex;align-items:center;gap:11px}.logo{width:47px;height:47px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:25px}.brand strong{font-family:Georgia,serif;font-size:23px}.brand strong span{color:var(--gold)}.tag{font-size:12px;color:#c6d0e1}.top-actions{display:flex;gap:8px;align-items:center}.select,.menu-btn{background:#ffffff12;color:white;border:1px solid #ffffff35;border-radius:11px;padding:9px 12px}.select option{color:#111}.wrap{max-width:1120px;margin:auto;padding:24px 18px 95px}.hero{background:radial-gradient(circle at 90% 10%,#294a7b 0,transparent 38%),linear-gradient(135deg,#102b55,#07162f);color:white;border-radius:25px;padding:34px 28px;position:relative;overflow:hidden}.eyebrow{color:var(--gold2);font-weight:750;letter-spacing:3px;font-size:12px}.hero h1{font: bold clamp(34px,6vw,58px)/1.12 Georgia,serif;max-width:720px;margin:18px 0}.hero h1 em{color:var(--gold);font-style:normal}.hero p{color:#c7d2e4;line-height:1.7;max-width:660px;font-size:17px}.search{display:flex;background:white;border-radius:17px;padding:7px;margin-top:23px;max-width:700px;gap:6px}.search input{border:0;outline:0;min-width:0;flex:1;padding:12px;color:var(--ink)}.primary{background:linear-gradient(135deg,var(--gold2),#d69b35);border:0;border-radius:13px;padding:12px 19px;font-weight:750;color:#17213a}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.chip{border:1px solid #ffffff35;background:#ffffff0d;color:#dce5f3;border-radius:30px;padding:8px 12px;font-size:13px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:28px 0 14px}.section-head h2{font: bold 25px Georgia,serif;margin:0;color:var(--navy)}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 5px 20px #13294a08}.card h3{margin:8px 0;color:var(--navy);font-size:17px}.card p{color:var(--muted);font-size:14px;line-height:1.55;margin:6px 0}.ico{width:40px;height:40px;border-radius:13px;background:#f8f0dc;color:#8b641d;display:grid;place-items:center;font-size:21px}.fact{display:flex;gap:16px;align-items:flex-start;border-left:4px solid var(--gold);margin-top:20px}.fact .ico{flex:none}.fact p{margin:6px 0 0}.btn{border:1px solid var(--line);background:white;color:var(--navy);border-radius:11px;padding:9px 13px;font-weight:650}.btn:hover,.chip:hover{border-color:var(--gold)}.btn.small{font-size:13px;padding:7px 10px}.page{display:none}.page.active{display:block}.page-title{font: bold 32px Georgia,serif;color:var(--navy);margin:6px 0}.sub{color:var(--muted);line-height:1.6}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}.tab{padding:9px 13px;border-radius:30px;border:1px solid var(--line);background:white;color:var(--ink)}.tab.active{background:var(--navy);color:white}.chatbox{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden}.messages{padding:17px;min-height:270px;max-height:480px;overflow:auto;display:flex;flex-direction:column;gap:12px}.msg{max-width:88%;padding:12px 14px;border-radius:15px;line-height:1.55;font-size:14px;white-space:pre-wrap}.msg.bot{background:#f0f3f8;align-self:flex-start}.msg.user{background:var(--navy);color:white;align-self:flex-end}.msg small{display:block;color:#7c8798;margin-top:7px;font-size:11px}.composer{display:flex;padding:10px;border-top:1px solid var(--line);gap:8px}.composer input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:12px}.notice{background:#fff8e8;border:1px solid #f0dcae;color:#6e531b;padding:12px 14px;border-radius:12px;font-size:13px;line-height:1.5;margin:14px 0}.item{padding:15px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.item h3{margin:0 0 6px;color:var(--navy);font-size:16px}.item p{margin:0 0 9px;color:var(--muted);font-size:14px;line-height:1.55}.item a{color:#805d19;font-weight:650;text-decoration:none}.quiz-option{display:block;width:100%;text-align:left;padding:13px;border:1px solid var(--line);background:white;border-radius:12px;margin:8px 0}.quiz-option:focus,.quiz-option:hover{border-color:var(--gold);background:#fffcf4}.progress{height:7px;background:#e8ecf2;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:var(--gold);width:0}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fffffff2;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:6}.nav{width:min(760px,100%);display:flex;justify-content:space-around}.nav button{border:0;background:none;color:#667184;padding:10px 7px 8px;min-width:58px;font-size:11px}.nav button b{display:block;font-size:21px;font-weight:500;margin-bottom:3px}.nav button.active{color:var(--navy);border-top:3px solid var(--gold)}.footer{text-align:center;color:#8590a1;font-size:12px;padding:25px 0 5px}.hidden{display:none!important}.pill{font-size:11px;border-radius:20px;background:#e9f4ee;color:var(--green);padding:5px 9px;font-weight:700}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.saved{color:#9a6d16}.empty{color:var(--muted);text-align:center;padding:25px}
+@media(max-width:700px){.wrap{padding:16px 14px 92px}.hero{padding:27px 19px;border-radius:20px}.hero p{font-size:15px}.grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:14px}.card h3{font-size:15px}.two{grid-template-columns:1fr}.top{padding:12px 14px}.brand strong{font-size:20px}.logo{width:42px;height:42px}.select{padding:8px}.section-head h2{font-size:22px}}@media(max-width:390px){.grid{grid-template-columns:1fr}.hero h1{font-size:35px}.search{flex-wrap:wrap}.search input{flex-basis:100%}.search button{width:100%}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">⚖</div><div><strong>Legal <span>Saathi</span></strong><div class="tag" data-i18n="tag">आपका कानूनी साथी</div></div></div>
+ <div class="top-actions"><select id="lang" class="select" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option></select><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button></div>
+</header>
+<main class="wrap">
+<section id="home" class="page active">
+ <div class="hero">
+  <div class="eyebrow" data-i18n="namaste">NAMASTE 🙏 · नमस्ते</div>
+  <h1 data-i18n="heroTitle">Know the law. <em>Know your rights.</em></h1>
+  <p data-i18n="heroDesc">Legal Saathi explains Indian laws and constitutional rights in simple Hindi and English — for students and every citizen.</p>
+  <form class="search" id="heroSearch"><input id="heroInput" placeholder="Ask your legal question..." aria-label="Legal question"><button class="primary" data-i18n="ask">Ask →</button></form>
+  <div class="chips"><button class="chip" data-question="What is a Zero FIR?">What is a Zero FIR?</button><button class="chip" data-question="मकान मालिक डिपॉजिट वापस नहीं कर रहा, क्या करूँ?">मकान मालिक डिपॉजिट वापस नहीं कर रहा?</button><button class="chip" data-question="How do I file a consumer complaint?">How do I file a consumer complaint?</button></div>
+ </div>
+ <div class="card fact"><div class="ico">💡</div><div><div class="eyebrow" style="color:#9a762e">TODAY'S LEGAL FACT · आज का कानूनी तथ्य</div><h3 data-i18n="factTitle">Free legal aid is a right for eligible people</h3><p data-i18n="factText">The Legal Services Authorities Act, 1987 provides legal services to eligible persons. Check eligibility and assistance through NALSA or your State Legal Services Authority.</p><a href="https://nalsa.gov.in/" target="_blank" rel="noopener">NALSA official website ↗</a></div></div>
+ <div class="section-head"><div><h2 data-i18n="popular">Explore legal topics</h2><p data-i18n="popularSub">Start with the topics people ask about most.</p></div></div>
+ <div class="grid" id="homeTopics"></div>
+</section>
+
+<section id="chat" class="page">
+ <h1 class="page-title" data-i18n="assistant">AI Legal Assistant</h1><p class="sub" data-i18n="assistantSub">Ask a general legal-awareness question in Hindi or English.</p>
+ <div class="notice" data-i18n="demoNotice">Demo mode: answers are educational guidance from a limited local knowledge base, not live AI. Do not enter names, addresses, case numbers or other confidential details.</div>
+ <div class="chatbox"><div class="messages" id="messages"><div class="msg bot" data-i18n="welcome">Namaste! I am Legal Saathi. Ask me about Indian laws, rights or legal procedures. I can provide general information, not personal legal advice.</div></div>
+ <form class="composer" id="chatForm"><input id="chatInput" placeholder="Type your legal question..." autocomplete="off"><button class="primary" data-i18n="send">Send</button></form></div>
+ <div class="chips"><button class="btn small" data-question="What are my rights if police arrest me?">Arrest rights</button><button class="btn small" data-question="How can I get free legal aid?">Free legal aid</button><button class="btn small" data-question="How do I file a consumer complaint?">Consumer complaint</button></div>
+ <button class="btn small" id="clearChat" style="margin-top:12px" data-i18n="clear">Clear chat</button>
+</section>
+
+<section id="rights" class="page">
+ <h1 class="page-title" data-i18n="rights">Know Your Rights</h1><p class="sub" data-i18n="rightsSub">Plain-language introductions. Open the official sources to verify the law.</p>
+ <div class="grid" id="rightsGrid"></div>
+</section>
+
+<section id="library" class="page">
+ <h1 class="page-title" data-i18n="library">Indian Law Library</h1><p class="sub" data-i18n="librarySub">Browse important Indian laws and official legal resources.</p>
+ <input id="lawSearch" class="btn" style="width:100%;text-align:left;padding:13px" placeholder="Search laws...">
+ <div id="lawList" class="card" style="margin-top:14px"></div>
+</section>
+
+<section id="guides" class="page">
+ <h1 class="page-title" data-i18n="guides">Legal Procedure Guides</h1><p class="sub">General educational guides. Actual procedure depends on the facts and current law.</p>
+ <div id="guideList" class="card"></div>
+</section>
+
+<section id="quiz" class="page">
+ <h1 class="page-title" data-i18n="quiz">Constitution Quiz</h1><p class="sub" data-i18n="quizSub">Test your understanding of the Indian Constitution.</p>
+ <div class="card"><div style="display:flex;justify-content:space-between;gap:10px"><b id="qCount">Question 1 of 5</b><span class="pill" id="qScore">Score: 0</span></div><div class="progress" style="margin:12px 0 18px"><span id="qProgress"></span></div><h3 id="qText">Loading question...</h3><div id="qOptions"></div><p id="qFeedback" class="sub" aria-live="polite"></p><button class="primary hidden" id="nextQ">Next question →</button></div>
+</section>
+
+<section id="saved" class="page">
+ <h1 class="page-title">Saved Topics</h1><p class="sub">Your saved topics are stored on this device only.</p><div id="savedList" class="card"></div>
+</section>
+<section id="about" class="page">
+ <h1 class="page-title">About Legal Saathi</h1><div class="card"><h3>Know the law. Know your rights.</h3><p>Legal Saathi is an educational project designed to make basic Indian legal information easier to understand in Hindi and English.</p><p>It is not a law firm, does not create an advocate-client relationship and cannot replace advice from a qualified lawyer.</p><p>For free legal aid, contact the relevant Legal Services Authority. Visit <a href="https://nalsa.gov.in/" target="_blank" rel="noopener">NALSA</a>.</p></div>
+ <div class="notice"><b>Important disclaimer:</b> Laws and procedures can change. This website provides general educational information, not legal advice. Verify current law from official sources and consult a qualified advocate for advice about a specific matter. In an emergency, contact the appropriate local emergency service.</div>
+</section>
+<div class="footer">LEGAL SAATHI · Educational legal awareness project · <span id="year"></span></div>
+</main>
+<nav class="bottom"><div class="nav">
+ <button data-page="home" class="active"><b>⌂</b><span data-i18n="home">Home</span></button>
+ <button data-page="chat"><b>▤</b><span data-i18n="askAI">Ask AI</span></button>
+ <button data-page="rights"><b>♧</b><span data-i18n="rightsNav">Rights</span></button>
+ <button data-page="library"><b>▣</b><span data-i18n="libraryNav">Library</span></button>
+ <button data-page="quiz"><b>✎</b><span data-i18n="quizNav">Quiz</span></button>
+</div></nav>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+let lang=localStorage.getItem('ls-lang')||'en', currentPage='home', qIndex=0, score=0, answered=false;
+const T={
+ en:{tag:'आपका कानूनी साथी',namaste:'NAMASTE 🙏 · नमस्ते',heroTitle:'Know the law. <em>Know your rights.</em>',heroDesc:'Legal Saathi explains Indian laws and constitutional rights in simple Hindi and English — for students and every citizen.',ask:'Ask →',factTitle:'Free legal aid is a right for eligible people',factText:'The Legal Services Authorities Act, 1987 provides legal services to eligible persons. Check eligibility and assistance through NALSA or your State Legal Services Authority.',popular:'Explore legal topics',popularSub:'Start with the topics people ask about most.',assistant:'AI Legal Assistant',assistantSub:'Ask a general legal-awareness question in Hindi or English.',demoNotice:'Demo mode: answers are educational guidance from a limited local knowledge base, not live AI. Do not enter names, addresses, case numbers or other confidential details.',welcome:'Namaste! I am Legal Saathi. Ask me about Indian laws, rights or legal procedures. I can provide general information, not personal legal advice.',send:'Send',clear:'Clear chat',rights:'Know Your Rights',rightsSub:'Plain-language introductions. Open the official sources to verify the law.',library:'Indian Law Library',librarySub:'Browse important Indian laws and official legal resources.',guides:'Legal Procedure Guides',quiz:'Constitution Quiz',quizSub:'Test your understanding of the Indian Constitution.',home:'Home',askAI:'Ask AI',rightsNav:'Rights',libraryNav:'Library',quizNav:'Quiz'},
+ hi:{tag:'आपका कानूनी साथी',namaste:'नमस्ते 🙏 · NAMASTE',heroTitle:'कानून जानें। <em>अपने अधिकार पहचानें।</em>',heroDesc:'लीगल साथी भारतीय कानूनों और संवैधानिक अधिकारों को सरल हिंदी और अंग्रेज़ी में समझाता है।',ask:'पूछें →',factTitle:'पात्र व्यक्तियों को निःशुल्क कानूनी सहायता मिल सकती है',factText:'विधिक सेवा प्राधिकरण अधिनियम, 1987 पात्र व्यक्तियों को कानूनी सेवाएँ उपलब्ध कराने का प्रावधान करता है। पात्रता के लिए NALSA या राज्य विधिक सेवा प्राधिकरण से संपर्क करें।',popular:'कानूनी विषय जानें',popularSub:'महत्वपूर्ण कानूनी विषयों से शुरुआत करें।',assistant:'AI कानूनी सहायक',assistantSub:'हिंदी या अंग्रेज़ी में सामान्य कानूनी जानकारी पूछें।',demoNotice:'डेमो मोड: उत्तर सीमित स्थानीय जानकारी पर आधारित शैक्षिक मार्गदर्शन हैं, लाइव AI नहीं। नाम, पता, केस नंबर या गोपनीय जानकारी न डालें।',welcome:'नमस्ते! मैं लीगल साथी हूँ। भारतीय कानून, अधिकार या कानूनी प्रक्रिया के बारे में पूछें। मैं सामान्य जानकारी दे सकता हूँ, व्यक्तिगत कानूनी सलाह नहीं।',send:'भेजें',clear:'चैट साफ़ करें',rights:'अपने अधिकार जानें',rightsSub:'सरल भाषा में परिचय। कानून की पुष्टि आधिकारिक स्रोतों से करें।',library:'भारतीय कानून पुस्तकालय',librarySub:'महत्वपूर्ण भारतीय कानून और आधिकारिक संसाधन देखें।',guides:'कानूनी प्रक्रिया मार्गदर्शिका',quiz:'संविधान प्रश्नोत्तरी',quizSub:'भारतीय संविधान की अपनी समझ जाँचें।',home:'होम',askAI:'AI से पूछें',rightsNav:'अधिकार',libraryNav:'कानून',quizNav:'क्विज़'}
+};
+const topics=[
+ {icon:'⚖',en:'Fundamental Rights',hi:'मौलिक अधिकार',desc:'Constitutional protections and freedoms.',url:'https://legislative.gov.in/constitution-of-india/'},
+ {icon:'👮',en:'Arrest & Police Rights',hi:'गिरफ्तारी और पुलिस संबंधी अधिकार',desc:'Understand safeguards and legal procedure.',url:'https://www.indiacode.nic.in/'},
+ {icon:'👩',en:"Women's Rights",hi:'महिलाओं के अधिकार',desc:'An introduction to important protections.',url:'https://nalsa.gov.in/'},
+ {icon:'🧒',en:"Children's Rights",hi:'बच्चों के अधिकार',desc:'Learn about child protection frameworks.',url:'https://www.indiacode.nic.in/'},
+ {icon:'🛒',en:'Consumer Rights',hi:'उपभोक्ता अधिकार',desc:'Know basic consumer protections and remedies.',url:'https://consumerhelpline.gov.in/'},
+ {icon:'🤝',en:'Free Legal Aid',hi:'निःशुल्क कानूनी सहायता',desc:'Find legal services and eligibility information.',url:'https://nalsa.gov.in/'}
+];
+const laws=[
+ ['Constitution of India','भारत का संविधान','Official constitutional text and amendments.','https://legislative.gov.in/constitution-of-india/'],
+ ['Bharatiya Nyaya Sanhita, 2023 (BNS)','भारतीय न्याय संहिता, 2023','Substantive criminal law.','https://www.indiacode.nic.in/'],
+ ['Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)','भारतीय नागरिक सुरक्षा संहिता, 2023','Criminal procedure law.','https://www.indiacode.nic.in/'],
+ ['Bharatiya Sakshya Adhiniyam, 2023 (BSA)','भारतीय साक्ष्य अधिनियम, 2023','Law relating to evidence.','https://www.indiacode.nic.in/'],
+ ['Consumer Protection Act, 2019','उपभोक्ता संरक्षण अधिनियम, 2019','Consumer rights and dispute redressal.','https://www.indiacode.nic.in/'],
+ ['Legal Services Authorities Act, 1987','विधिक सेवा प्राधिकरण अधिनियम, 1987','Framework for legal services authorities.','https://www.indiacode.nic.in/']
+];
+const guides=[
+ ['How to seek free legal aid','निःशुल्क कानूनी सहायता कैसे लें','Check eligibility and contact the nearest District Legal Services Authority (DLSA) or State Legal Services Authority. NALSA provides official information and helpline details.','https://nalsa.gov.in/'],
+ ['How to file a consumer complaint','उपभोक्ता शिकायत कैसे करें','Keep invoices, warranty details and communications. You can seek guidance through the National Consumer Helpline and the official e-Daakhil/consumer commission channels.','https://consumerhelpline.gov.in/'],
+ ['What to do after an arrest','गिरफ्तारी के बाद क्या करें','Stay calm, ask to be informed of the grounds of arrest, seek legal assistance and inform a trusted person. Exact rights and procedures depend on the circumstances and applicable law.','https://www.indiacode.nic.in/'],
+ ['How to find a legal services authority','विधिक सेवा प्राधिकरण कैसे खोजें','Use the NALSA website to locate the relevant State or District Legal Services Authority and verify current contact details.','https://nalsa.gov.in/']
+];
+const qa=[
+ {keys:['zero fir','ज़ीरो fir','zero एफआईआर'],en:'A Zero FIR is a police FIR that may be registered at a police station even when the alleged offence occurred outside that station’s territorial jurisdiction. It is then transferred to the police station with appropriate jurisdiction. The exact process should be checked under current law and local police procedures.',hi:'ज़ीरो FIR ऐसी FIR है जिसे घटना के क्षेत्राधिकार से बाहर स्थित पुलिस थाना भी दर्ज कर सकता है। बाद में इसे संबंधित क्षेत्राधिकार वाले थाने को भेजा जाता है। वर्तमान कानून और स्थानीय पुलिस प्रक्रिया की पुष्टि करें।',src:'https://www.indiacode.nic.in/'},
+ {keys:['arrest','गिरफ्तार','गिरफ्तारी','police arrest'],en:'If you are arrested, ask to be informed of the grounds of arrest, seek legal assistance, and ask that a relative or friend be informed as required by law. Do not sign documents you do not understand. Arrest safeguards depend on the facts and applicable provisions; consult a lawyer promptly.',hi:'गिरफ्तारी की स्थिति में गिरफ्तारी के आधार की जानकारी माँगें, कानूनी सहायता लें और कानून के अनुसार किसी रिश्तेदार या मित्र को सूचना देने का अनुरोध करें। जिस दस्तावेज़ को न समझें उस पर हस्ताक्षर न करें। सुरक्षा और प्रक्रिया परिस्थितियों तथा लागू प्रावधानों पर निर्भर करती है; शीघ्र वकील से सलाह लें।',src:'https://www.indiacode.nic.in/'},
+ {keys:['consumer complaint','उपभोक्ता शिकायत','consumer court'],en:'Keep your bill, order details, warranty and written communications. You can first approach the seller or service provider and use the National Consumer Helpline for guidance. Formal complaints may be filed through the consumer dispute redressal system. Check the official portal for current procedure.',hi:'बिल, ऑर्डर विवरण, वारंटी और लिखित बातचीत सुरक्षित रखें। पहले विक्रेता या सेवा प्रदाता से संपर्क करें और मार्गदर्शन के लिए राष्ट्रीय उपभोक्ता हेल्पलाइन का उपयोग करें। औपचारिक शिकायत उपभोक्ता विवाद निवारण प्रणाली में की जा सकती है। वर्तमान प्रक्रिया आधिकारिक पोर्टल पर जाँचें।',src:'https://consumerhelpline.gov.in/'},
+ {keys:['free legal aid','legal aid','मुफ्त कानूनी','निःशुल्क कानूनी','विधिक सहायता'],en:'Free legal services are available to eligible categories under the Legal Services Authorities Act, 1987. Contact your District Legal Services Authority or visit NALSA to check eligibility and application steps.',hi:'विधिक सेवा प्राधिकरण अधिनियम, 1987 के अंतर्गत पात्र श्रेणियों के व्यक्तियों को निःशुल्क विधिक सेवाएँ मिल सकती हैं। पात्रता और आवेदन प्रक्रिया जानने के लिए जिला विधिक सेवा प्राधिकरण या NALSA से संपर्क करें।',src:'https://nalsa.gov.in/'},
+ {keys:['fundamental rights','मौलिक अधिकार'],en:'Fundamental Rights are contained in Part III of the Constitution of India (Articles 12–35). They include equality, freedoms, protection against exploitation, freedom of religion, cultural and educational rights, and constitutional remedies. Read the constitutional text for exact wording and limitations.',hi:'भारतीय संविधान के भाग III (अनुच्छेद 12–35) में मौलिक अधिकार दिए गए हैं। इनमें समानता, स्वतंत्रता, शोषण के विरुद्ध संरक्षण, धर्म की स्वतंत्रता, सांस्कृतिक एवं शैक्षिक अधिकार तथा संवैधानिक उपचार शामिल हैं। सटीक भाषा और सीमाओं के लिए संविधान पढ़ें।',src:'https://legislative.gov.in/constitution-of-india/'}
+];
+const quiz=[
+ {q:'Which Part of the Indian Constitution contains Fundamental Rights?',o:['Part II','Part III','Part IV','Part IVA'],a:1,e:'Fundamental Rights are contained in Part III, Articles 12–35.'},
+ {q:'Which Article guarantees equality before the law?',o:['Article 14','Article 19','Article 21','Article 32'],a:0,e:'Article 14 guarantees equality before the law and equal protection of the laws.'},
+ {q:'Which Article is commonly associated with protection of life and personal liberty?',o:['Article 15','Article 17','Article 21','Article 25'],a:2,e:'Article 21 protects life and personal liberty, subject to the constitutional text and judicial interpretation.'},
+ {q:'Which body provides free legal services through the national legal aid framework?',o:['NALSA','SEBI','UPSC','NITI Aayog'],a:0,e:'NALSA is the National Legal Services Authority.'},
+ {q:'The Directive Principles of State Policy are primarily found in which Part?',o:['Part I','Part III','Part IV','Part V'],a:2,e:'Directive Principles of State Policy are contained in Part IV.'}
+];
+function render(){
+ $('#homeTopics').innerHTML=topics.slice(0,6).map((t,i)=>`<article class="card"><div class="ico">${t.icon}</div><h3>${lang==='hi'?t.hi:t.en}</h3><p>${t.desc}</p><button class="btn small" onclick="openTopic(${i})">${lang==='hi'?'और जानें':'Learn more'} →</button></article>`).join('');
+ $('#rightsGrid').innerHTML=topics.map((t,i)=>`<article class="card"><div class="ico">${t.icon}</div><h3>${lang==='hi'?t.hi:t.en}</h3><p>${t.desc}</p><a href="${t.url}" target="_blank" rel="noopener">Official resource ↗</a><button class="btn small" style="float:right" onclick="saveTopic(${i})">☆ Save</button></article>`).join('');
+ renderLaws();renderGuides();renderSaved();applyTranslations();
+}
+function applyTranslations(){document.documentElement.lang=lang;$$('[data-i18n]').forEach(el=>{let k=el.dataset.i18n;if(T[lang][k])el.innerHTML=T[lang][k]});$('#heroInput').placeholder=lang==='hi'?'अपना कानूनी प्रश्न पूछें...':'Ask your legal question...';$('#chatInput').placeholder=lang==='hi'?'अपना कानूनी प्रश्न लिखें...':'Type your legal question...';}
+function navigate(page){currentPage=page;$$('.page').forEach(p=>p.classList.toggle('active',p.id===page));$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));window.scrollTo({top:0,behavior:'smooth'});if(page==='saved')renderSaved();}
+$$('.nav button').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.page)));
+$('#menuBtn').addEventListener('click',()=>{let p=prompt('Open page: home, chat, rights, library, guides, quiz, saved, about');if(p&&document.getElementById(p))navigate(p)});
+$('#lang').value=lang;$('#lang').addEventListener('change',e=>{lang=e.target.value;localStorage.setItem('ls-lang',lang);render()});
+function ask(q){if(!q.trim())return;$('#chatInput').value=q;navigate('chat');sendQuestion(q)}
+$('#heroSearch').addEventListener('submit',e=>{e.preventDefault();ask($('#heroInput').value)});
+$$('[data-question]').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.question)));
+$('#chatForm').addEventListener('submit',e=>{e.preventDefault();let q=$('#chatInput').value.trim();if(q)sendQuestion(q)});
+function addMsg(text,who,source){let d=document.createElement('div');d.className='msg '+who;d.textContent=text;if(source){let a=document.createElement('a');a.href=source;a.target='_blank';a.rel='noopener';a.textContent=lang==='hi'?'आधिकारिक स्रोत ↗':'Official source ↗';a.style.display='block';a.style.marginTop='8px';a.style.color=who==='user'?'#f2d28b':'#805d19';d.appendChild(a)}if(who==='bot'){let s=document.createElement('small');s.textContent=lang==='hi'?'स्थानीय डेमो जानकारी · लाइव AI नहीं':'Local demo information · not live AI';d.appendChild(s)}$('#messages').appendChild(d);$('#messages').scrollTop=$('#messages').scrollHeight}
+function sendQuestion(q){addMsg(q,'user');$('#chatInput').value='';let norm=q.toLowerCase();let hit=qa.find(x=>x.keys.some(k=>norm.includes(k)));let ans=hit?(lang==='hi'?hit.hi:hit.en):(lang==='hi'?'इस डेमो में इस प्रश्न का सत्यापित उत्तर उपलब्ध नहीं है। कृपया India Code या संबंधित आधिकारिक सरकारी स्रोत देखें और किसी विशिष्ट मामले के लिए वकील से सलाह लें।':'I do not have a verified answer for this question in the demo knowledge base. Please check India Code or the relevant official government source, and consult a qualified lawyer about a specific matter.');setTimeout(()=>addMsg(ans,'bot',hit?hit.src:'https://www.indiacode.nic.in/'),250)}
+$('#clearChat').addEventListener('click',()=>{$('#messages').innerHTML='';addMsg(T[lang].welcome,'bot')});
+function renderLaws(filter=''){let f=filter.toLowerCase();$('#lawList').innerHTML=laws.filter(x=>x.join(' ').toLowerCase().includes(f)).map(x=>`<div class="item"><h3>${lang==='hi'?x[1]:x[0]}</h3><p>${x[2]}</p><a href="${x[3]}" target="_blank" rel="noopener">Open official source ↗</a></div>`).join('')||'<p class="empty">No matching laws found.</p>'}
+$('#lawSearch').addEventListener('input',e=>renderLaws(e.target.value));
+function renderGuides(){$('#guideList').innerHTML=guides.map(g=>`<div class="item"><h3>${lang==='hi'?g[1]:g[0]}</h3><p>${g[2]}</p><a href="${g[3]}" target="_blank" rel="noopener">Official resource ↗</a></div>`).join('')}
+function saved(){try{return JSON.parse(localStorage.getItem('ls-saved')||'[]')}catch{return []}}
+function saveTopic(i){let a=saved();if(!a.includes(i))a.push(i);localStorage.setItem('ls-saved',JSON.stringify(a));renderSaved();alert(lang==='hi'?'विषय सेव हो गया':'Topic saved on this device')}
+function renderSaved(){let a=saved();$('#savedList').innerHTML=a.length?a.map(i=>`<div class="item"><b>${lang==='hi'?topics[i].hi:topics[i].en}</b> <button class="btn small" onclick="removeSaved(${i})">Remove</button></div>`).join(''):'<p class="empty">No saved topics yet. Save a topic from Know Your Rights.</p>'}
+function removeSaved(i){localStorage.setItem('ls-saved',JSON.stringify(saved().filter(x=>x!==i)));renderSaved()}
+function openTopic(i){let t=topics[i];ask((lang==='hi'?'मुझे इस विषय के बारे में सामान्य कानूनी जानकारी दें: ':'Explain this legal topic in general terms: ')+(lang==='hi'?t.hi:t.en))}
+function showQ(){let q=quiz[qIndex];$('#qCount').textContent=`Question ${qIndex+1} of ${quiz.length}`;$('#qScore').textContent=`Score: ${score}`;$('#qProgress').style.width=((qIndex)/quiz.length*100)+'%';$('#qText').textContent=q.q;$('#qFeedback').textContent='';$('#nextQ').classList.add('hidden');answered=false;$('#qOptions').innerHTML=q.o.map((o,i)=>`<button class="quiz-option" data-answer="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('');$$('[data-answer]').forEach(b=>b.addEventListener('click',()=>{if(answered)return;answered=true;let correct=Number(b.dataset.answer)===q.a;if(correct)score++;$('#qScore').textContent=`Score: ${score}`;$('#qFeedback').textContent=(correct?'Correct! ':'Not quite. ')+q.e;$$('[data-answer]').forEach(x=>x.disabled=true);$('#nextQ').textContent=qIndex===quiz.length-1?'See results':'Next question →';$('#nextQ').classList.remove('hidden')}))}
+$('#nextQ').addEventListener('click',()=>{if(qIndex<quiz.length-1){qIndex++;showQ()}else{$('#qText').textContent=`Quiz complete! Your score: ${score}/${quiz.length}`;$('#qOptions').innerHTML='';$('#qFeedback').textContent='Review the explanations and try again.';$('#nextQ').textContent='Restart quiz';$('#nextQ').classList.remove('hidden');$('#nextQ').onclick=()=>{qIndex=0;score=0;$('#nextQ').onclick=null;showQ()}}});
+$('#year').textContent=new Date().getFullYear();render();showQ();
+</script>
+</body></html>
